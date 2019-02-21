@@ -24,4 +24,11 @@ def file_reading():
     return {'petrol_stations': petrol_stations, 'clients': clients}
 
 
-print(file_reading()['clients'])
+def time_list():
+    day_time_list = []
+    for hour in range(24):
+        for minute in range(60):
+            current_hour = str(hour).rjust(2, '0')
+            current_minute = str(minute).rjust(2, '0')
+            day_time_list.append(f'{current_hour}:{current_minute}')
+    return day_time_list
