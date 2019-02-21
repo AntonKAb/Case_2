@@ -22,6 +22,3 @@ def file_reading():
             clients.update({number: {'arrival': client_data[0], 'time': int(client_data[1]), 'oil': client_data[2]}})
             number += 1
     return {'petrol_stations': petrol_stations, 'clients': clients}
-
-
-print(file_reading()['clients'])
