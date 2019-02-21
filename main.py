@@ -11,9 +11,12 @@ def file_reading():
         data = petrols_file.readlines()
         for petrol in data:
             petrol_data = petrol.rstrip().split()
-            petrol_stations.update({int(petrol_data[0])-1: {'cars_number': int(petrol_data[1]), 'oil': []}})
+            petrol_stations.update({int(petrol_data[0])-1: {'cars_number': int(petrol_data[1]),
+                                                            'oil': [], 'queue': []}})
             for oil in petrol_data[2:]:
                 petrol_stations[int(petrol_data[0])-1]['oil'].append(oil)
+            for _ in range(petrol_stations[int(petrol_data[0])-1]['cars_number']):
+                petrol_stations[int(petrol_data[0]) - 1]['queue'].append(0)
     with open('input.txt') as clients_file:
         data = clients_file.readlines()
         number = 0
