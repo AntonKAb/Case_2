@@ -22,7 +22,8 @@ def file_reading():
         number = 0
         for client in data:
             client_data = client.rstrip().split()
-            clients.update({number: {'arrival': client_data[0], 'time': int(client_data[1]), 'oil': client_data[2]}})
+            clients.update({number: {'arrival': client_data[0], 'time': int(client_data[1]),
+                                     'oil': client_data[2], 'action': False}})
             number += 1
     return {'petrol_stations': petrol_stations, 'clients': clients}
 
