@@ -172,4 +172,5 @@ def main():
                                       statistic["oil"][F_98], statistic["sum"], statistic["turned_clients"]))
 
 
-main()
+if __name__ == '__main__':
+    main()
